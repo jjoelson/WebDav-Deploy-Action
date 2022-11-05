@@ -1,0 +1,22 @@
+name: "WebDAV Deploy Action"
+description: "Deploy files using WebDAV"
+author: "Jonathan Joelson"
+inputs:
+  server:
+    description: "WebDAV server to connect to"
+    required: true
+  username:
+    description: "WebDAV server username"
+    required: true
+  password:
+    description: "WebDAV server password"
+    required: true
+  local-dir:
+    required: true
+    description: "Folder to upload from, must end with trailing slash /"
+  server-dir:
+    required: true
+    description: "Path to upload to on the server, must end with trailing slash /"
+runs:
+  using: "node16"
+  main: "index.js"
